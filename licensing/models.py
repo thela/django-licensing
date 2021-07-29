@@ -16,7 +16,7 @@ class License(models.Model):
         return self.url
 
 class Licensed(models.Model):
-    license = models.ForeignKey(License, on_delete=models.CASCADE)
+    license = models.ForeignKey(License, on_delete=models.CASCADE, default=6)
     class Meta:
         abstract = True
 
